@@ -3,7 +3,7 @@
 This is a customized version of [echavet/MitsubishiCN105ESPHome](https://github.com/echavet/MitsubishiCN105ESPHome).  
 It includes ESPHome YAML configurations targeting the ESP32-C3 platform, along with usage notes for integrating Mitsubishi HVAC systems via CN105.
 
-適用廠牌: **三菱電機冷氣**，壁掛、吊隱皆可
+適用廠牌: **三菱《《電機》》冷氣**，壁掛、吊隱皆可
 
 **適用型號: 需拆開機殼找出機板上有個紅色寫著CN105接頭，有這個就能控制** 
 
