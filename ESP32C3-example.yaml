@@ -1,0 +1,151 @@
+substitutions:
+  devicename: climate-mt #記得每台要不同名稱避免打架
+  upper_devicename: "Climate-MT"
+  model_name: "Climate-MT" #可加註冷氣型號
+
+esphome:
+  name: $devicename
+  friendly_name: ${upper_devicename}
+  comment: ESP32C3 for $model_name
+  name_add_mac_suffix: true
+  project:
+    name: "Mitsubishi-CN105.$model_name"
+    version: "ESP32C3"
+
+external_components:
+  - source: github://echavet/MitsubishiCN105ESPHome
+
+esp32:
+  board: airm2m_core_esp32c3
+  framework:
+    type: esp-idf
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: ${devicename}
+    password: "12345678"
+
+captive_portal:
+
+# Enable logging
+logger:
+  baud_rate: 0 # disable serial logging;
+#  level: VERY_VERBOSE
+
+# Enable Home Assistant API
+api:
+
+ota:
+  - platform: esphome
+
+web_server:
+
+uart:
+  id: HP_UART
+  tx_pin: GPIO7 #21 #pin3 (RX to AC)
+  rx_pin: GPIO6 #20 #pin4 (TX from AC)
+  baud_rate: 2400
+
+# optional binary sensor to monitor serial connection:
+binary_sensor:
+  - platform: status
+    name: "Status"
+
+status_led:
+  pin:
+    number: GPIO8 # Blue LED
+    #inverted: True # C3 pro need set True
+
+climate:
+  - platform: cn105
+    id: hp
+    name: "Climate"
+    icon: mdi:heat-pump
+    # visual:
+    #   min_temperature: 10 # Adjust to your unit's min temp. SmartSet units can go to 10C for heating
+    #   max_temperature: 31
+    #   temperature_step:
+    #     target_temperature: 1
+    #     current_temperature: 0.5
+    # Fahrenheit compatibility mode - uses Mitsubishi's "custom" unit conversions, set to
+    # "true" for better support of Fahrenheit units in HomeAssistant
+    fahrenheit_compatibility: false
+    # Timeout and communication settings
+    # remote_temperature_timeout: 30min
+    update_interval: 2s
+    debounce_delay : 100ms
+    # Various optional sensors, not all sensors are supported by all heatpumps
+    compressor_frequency_sensor:
+      name: Compressor Frequency
+      entity_category: diagnostic
+      disabled_by_default: true
+    outside_air_temperature_sensor:
+      name: Outside Air Temp
+      disabled_by_default: true
+    vertical_vane_select:
+      name: Vertical Vane
+      disabled_by_default: false
+    horizontal_vane_select:
+      name: Horizontal Vane
+      #disabled_by_default: true
+    isee_sensor:
+      name: ISEE Sensor
+      disabled_by_default: true
+    stage_sensor:
+      name: Stage
+      entity_category: diagnostic
+      disabled_by_default: true
+    sub_mode_sensor:
+      name: Sub Mode
+      entity_category: diagnostic
+      disabled_by_default: true
+    auto_sub_mode_sensor:
+      name: Auto Sub Mode
+      entity_category: diagnostic
+      disabled_by_default: true
+    input_power_sensor:
+      name: Input Power
+      disabled_by_default: true
+    kwh_sensor:
+      name: Energy Usage
+      #disabled_by_default: true
+    runtime_hours_sensor:
+      name: Runtime Hours
+      entity_category: diagnostic
+      disabled_by_default: true
+
+
+button:
+  - platform: restart
+    name: "Restart"
+
+sensor:
+  - platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 120s
+
+  - platform: uptime
+    name: "Uptime"
+    filters:
+      - lambda: return x / 3600;
+    unit_of_measurement: "h"
+    accuracy_decimals: 1
+
+  - platform: internal_temperature
+    name: "ESP32 Temperature"
+
+
+text_sensor:
+  - platform: version
+    name: "ESPHome Version"
+  - platform: wifi_info
+    ip_address:
+      name: "IP Address"
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
