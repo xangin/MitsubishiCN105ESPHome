@@ -17,7 +17,6 @@ YAML修改基本上只要修改最頂端的名稱即可，方便OTA與辨識是�
 
 ## 如何下載
 
-
 點擊檔案名稱>點右上角有個下載的圖案(Download Raw file)>儲存
 
 ## 使用方法
@@ -37,7 +36,25 @@ YAML修改基本上只要修改最頂端的名稱即可，方便OTA與辨識是�
 1. 在瀏覽器網址列輸入裝置IP
 2. 最下方OTA Update選擇ota.bin檔>按Update，等待畫面跳轉為done即完成
 
+## 硬體架構
 
+### 硬體需求
+
+1. ESP32C3 super mini
+2. 5V to 3.3V level shifter
+3. PA2.0-5P female for CN105
+
+### CN105腳位定義
+
+參考自[SwiCago/HeatPump README](https://github.com/SwiCago/HeatPump/blob/master/README.md#demo-circuit)
+
+| Pin | 功能 |
+|-------|:-----:|
+| 1 | 12V(不用接) |
+| 2 | GND |
+| 3 | 5V |
+| 4 | TX(來自冷氣) |
+| 5 | RX(來自冷氣) |
 
 ## 📦 Credits
 This project is based on the excellent work of [echavet/MitsubishiCN105ESPHome](https://github.com/echavet/MitsubishiCN105ESPHome), which itself integrates multiple community contributions.  
