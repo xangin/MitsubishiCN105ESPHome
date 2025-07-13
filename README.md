@@ -1,19 +1,23 @@
-# MitsubishiCN105ESPHome (Simon’s Customized Version for ESP32-C3)
+# MitsubishiCN105ESPHome
 
 This is a customized version of [echavet/MitsubishiCN105ESPHome](https://github.com/echavet/MitsubishiCN105ESPHome).  
 It includes ESPHome YAML configurations targeting the ESP32-C3 platform, along with usage notes for integrating Mitsubishi HVAC systems via CN105.
 
 適用廠牌: **三菱電機冷氣**，壁掛、吊隱皆可
 
-**適用型號: 需拆開機殼找出機板上有個暗紅色寫著CN105接頭，有這個就能控制**
+**適用型號: 需拆開機殼找出機板上有個暗紅色寫著CN105接頭，有這個就能控制** 
 
-基本上只要修改最頂端的兩個名稱即可，方便OTA與辨識是哪一台
+
+(可搜尋[mitsubishi cn105](https://www.google.com/search?sca_esv=5b070172e01c51df&sxsrf=AE3TifNxQjLFcJ7dliwfM1pfAhlKMd25Ig:1752415035350&q=mitsubishi+cn105&udm=2&fbs=AIIjpHybaGNnaZw_4TckIDK59Rtx4FbWz8M1G9nQGNKSn1ac4RwxWEIVsDCHTtcX7EMisKPo2x-K2YXHUvoNp-hb6MFkGu7L2620ab6wOvo0TrapbKMy6BQ9l9X11pf1caiFRuttLPEFGW0_zf8EDjZOd7O4Z9HxiH3J782Mw7yZTOfQl9wIoHJgELWDXXeB0rUi_pSHkuYE&sa=X&ved=2ahUKEwillrnd_rmOAxWbaPUHHRdGJeEQtKgLKAJ6BAgVEAE&biw=1792&bih=856&dpr=2.14)可以看到更多CN105插座所在圖)
 
 `climate-mt.factory.bin`適用USB線直接燒錄，想自行修改YAML請參考`ESP32C3-example.yaml`
+
+YAML修改基本上只要修改最頂端的名稱即可，方便OTA與辨識是哪一台，也可將用不到的實體註解掉
 
 `climate-mt.ota.bin`僅供燒錄過OTA更新用
 
 ## 如何下載
+
 
 點擊檔案名稱>點右上角有個下載的圖案(Download Raw file)>儲存
 
