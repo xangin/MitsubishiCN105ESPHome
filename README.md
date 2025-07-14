@@ -41,7 +41,7 @@ YAML修改基本上只要修改最頂端的名稱即可，方便OTA與辨識是�
 ### 硬體需求
 
 1. ESP32C3 super mini
-2. 5V to 3.3V level shifter
+2. 5V to 3.3V level shifter (推薦使用)
 3. PA2.0-5P female for CN105
 
 ### 排線接法
@@ -55,6 +55,8 @@ YAML修改基本上只要修改最頂端的名稱即可，方便OTA與辨識是�
 | 3 | 5V | 5V |
 | 4 | TX | RX(GPIO6) |
 | 5 | RX | TX(GPIO7) |
+
+**※ESP32C3的TX, RX接到冷氣間可對接，但推薦使用5V to 3.3V level shifter，避免傷及ESP32C3的GPIO或傳輸不穩定**
 
 ## 📦 Credits
 This project is based on the excellent work of [echavet/MitsubishiCN105ESPHome](https://github.com/echavet/MitsubishiCN105ESPHome), which itself integrates multiple community contributions.  
