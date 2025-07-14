@@ -46,8 +46,8 @@ web_server:
 
 uart:
   id: HP_UART
-  tx_pin: GPIO7 #21 #pin3 (RX to AC)
-  rx_pin: GPIO6 #20 #pin4 (TX from AC)
+  tx_pin: GPIO7 #(connect to AC RX)
+  rx_pin: GPIO6 #(connect to AC TX)
   baud_rate: 2400
 
 # optional binary sensor to monitor serial connection:
