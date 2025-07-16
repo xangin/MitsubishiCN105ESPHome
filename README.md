@@ -63,6 +63,10 @@ YAML修改基本上只要修改最頂端的名稱即可，方便OTA與辨識是�
 | 4 | TX | RX(GPIO6) |
 | 5 | RX | TX(GPIO7) |
 
+PA2.0-5P 排線Pin順序:
+
+<img src="images/pa-5p_cable.jpg" width=450/>
+
 **※ESP32C3的TX, RX接到冷氣間可對接，但推薦使用5V to 3.3V level shifter，避免傷及ESP32C3的GPIO或傳輸不穩定**
 
 ## 📦 Credits
