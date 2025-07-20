@@ -15,6 +15,8 @@ It includes ESPHome YAML configurations targeting the ESP32-C3 platform, along w
 
 **吊隱式:** `SEZ-MXXDAL-TW`,  `SEZ-KDXXVA(L)`
 
+**壁掛型:** `MSZ-GRXXNJ`
+
 - - -
 
 (搜尋[mitsubishi cn105](https://www.google.com/search?sca_esv=5b070172e01c51df&sxsrf=AE3TifNxQjLFcJ7dliwfM1pfAhlKMd25Ig:1752415035350&q=mitsubishi+cn105&udm=2&fbs=AIIjpHybaGNnaZw_4TckIDK59Rtx4FbWz8M1G9nQGNKSn1ac4RwxWEIVsDCHTtcX7EMisKPo2x-K2YXHUvoNp-hb6MFkGu7L2620ab6wOvo0TrapbKMy6BQ9l9X11pf1caiFRuttLPEFGW0_zf8EDjZOd7O4Z9HxiH3J782Mw7yZTOfQl9wIoHJgELWDXXeB0rUi_pSHkuYE&sa=X&ved=2ahUKEwillrnd_rmOAxWbaPUHHRdGJeEQtKgLKAJ6BAgVEAE&biw=1792&bih=856&dpr=2.14)可以看到更多CN105插座所在圖)
