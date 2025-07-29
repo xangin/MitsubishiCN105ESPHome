@@ -18,7 +18,7 @@ external_components:
 esp32:
   board: airm2m_core_esp32c3
   framework:
-    type: esp-idf
+    type: arduino
 
 wifi:
   ssid: !secret wifi_ssid
@@ -65,9 +65,9 @@ climate:
     id: hp
     name: "Climate"
     icon: mdi:heat-pump
-    # visual:
+    visual:
     #   min_temperature: 10 # Adjust to your unit's min temp. SmartSet units can go to 10C for heating
-    #   max_temperature: 31
+      max_temperature: 31
     #   temperature_step:
     #     target_temperature: 1
     #     current_temperature: 0.5
