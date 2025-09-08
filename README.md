@@ -13,9 +13,11 @@ It includes ESPHome YAML configurations targeting the ESP32-C3 platform, along w
 
 ### 已測試型號OK(歡迎回報):
 
-**吊隱式:** `SEZ-MXXDAL-TW`,  `SEZ-KDXXVA(L)`
+**吊隱式:** `SEZ-M**DAL-TW`,  `SEZ-KD**VA(L)`
 
-**壁掛型:** `MSZ-GRXXNJ`
+**壁掛型:** `MSZ-GR**NJ`, `MSZ-HT**NF`
+
+CN105是**白色**接頭的型號: `MSZ-HT**NF`
 
 - - -
 
