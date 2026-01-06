@@ -21,6 +21,12 @@ CN105是**白色**接頭的型號: `MSZ-HT**NF`
 
 - - -
 
+## 接頭樣式
+
+拆開外殼，面向主機在右下方可以找到如下寫著CN105的接頭，有可能是"白色"或"紅色"外觀
+
+<img src="images/CN105.jpg" width=450/>
+
 (搜尋[mitsubishi cn105](https://www.google.com/search?sca_esv=5b070172e01c51df&sxsrf=AE3TifNxQjLFcJ7dliwfM1pfAhlKMd25Ig:1752415035350&q=mitsubishi+cn105&udm=2&fbs=AIIjpHybaGNnaZw_4TckIDK59Rtx4FbWz8M1G9nQGNKSn1ac4RwxWEIVsDCHTtcX7EMisKPo2x-K2YXHUvoNp-hb6MFkGu7L2620ab6wOvo0TrapbKMy6BQ9l9X11pf1caiFRuttLPEFGW0_zf8EDjZOd7O4Z9HxiH3J782Mw7yZTOfQl9wIoHJgELWDXXeB0rUi_pSHkuYE&sa=X&ved=2ahUKEwillrnd_rmOAxWbaPUHHRdGJeEQtKgLKAJ6BAgVEAE&biw=1792&bih=856&dpr=2.14)可以看到更多CN105插座所在圖)
 
 `climate-mt.factory.bin`適用USB線直接燒錄，想自行修改YAML請參考`ESP32C3-example.yaml`
